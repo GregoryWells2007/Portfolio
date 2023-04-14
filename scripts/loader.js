@@ -7,7 +7,7 @@ function readFile(file) {
 
 
 async function loader_loadshader(path) {
-    var file = await fetch("../" + path);
+    var file = await fetch("/" + path);
     var data = await file.text();
     
     var datas = [];
