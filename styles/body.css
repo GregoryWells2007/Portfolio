@@ -1,9 +1,121 @@
+:root {
+    font-family: "Kanit";
+    transition: all 0.5s;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
 body {
-    background-color: white;
+    background-color: rgb(20.4, 20.4, 30.6);
 }
 
 #body_world {
     top: 0px;
     left: 0px;
     position: fixed;
+}
+
+#name {
+    z-index: 1;
+    position: fixed;
+    color: white;
+    font-size: 6vw;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    transition: all 0.75s;
+    font-family: "Kanit";
+}
+
+@font-face {
+    font-family: "Kanit";
+    src: url(../fonts/Kanit-Black.ttf);
+}
+
+#bottom_text {
+    color: white;
+    font-size: 1vw;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    top: calc(8.5vw / 2);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.fadebelow {
+    top: 7vw !important;
+    opacity: 1 !important;
+}
+
+.totop {
+    top: 0% !important;
+    transform: translateY(-20%) !important;
+    font-size: 7vw !important;
+}
+
+#maintitle {
+    position: fixed;
+    top: 10px;
+    width: calc(100vw - 25px);
+    left: 50%;
+    transform: translateX(-50%);
+    height: 9vw;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+#internal {
+    position: fixed;
+    width: calc(100vw - 25px);
+    height: calc(100vh - 9vw - 30px);
+    top: calc(9vw + 20px);
+    left: 50%;
+    transform: translateX(-50%);    
+}
+
+#main_page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+    width: 100%;
+    height: 100%;
+    transition: all 0.25s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.internal_clicked {
+    filter: blur(10px) grayscale(100%);
+}
+
+.button {
+    font-size: 4vw;
+    text-align: center;
+
+    border-style: solid; 
+    border-color: white;
+    border-width: 2px;    
+    border-radius: 10px;
+    box-shadow: 0 0 10px #9ecaed;
+    color: white;
+    transition: all 0.5s;
+}
+
+.button:hover {
+    margin: 5px 5px 5px 5px;
+}
+
+.hide_page {
+    opacity: 0 !important;
+    pointer-events: none;
 }

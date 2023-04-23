@@ -4,18 +4,156 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>men r sexy</title>
+    <title>Gregory Wells</title>
 
     <link rel="stylesheet" href="styles/body.css">
-
-    <script src="scripts/loader.js"></script>
-    <script src="scripts/types.js"></script>
+    <link rel="stylesheet" href="styles/projects_page.css">
+    <link rel="stylesheet" href="styles/about_page.css">
+    <link rel="stylesheet" href="styles/education_page.css">
+    <link rel="stylesheet" href="styles/skills_page.css">
+    <link rel="stylesheet" href="styles/awards_page.css">
+    <link rel="stylesheet" href="styles/community_page.css">
 
     <script src="scripts/init.js"></script>
-    <script src="scripts/renderer.js"></script>
-    <script src="scripts/build_world.js"></script>
+
+    <script src="scripts/ext/gl-matrix.js"></script>
+
+    <script src="scripts/utils/math.js"></script>
+    <script src="scripts/utils/loader.js"></script>
+    <script src="scripts/utils/writein.js"></script>
 </head>
 <body onload="init_app()">
-    <canvas id="body_world"></canvas>
+    <canvas id="body_world" style="display: none"></canvas>
+
+    <div id="maintitle">
+        <div id="name">Gregory</div>
+        <div id="bottom_text">Programmer, 3d Artist, Designer</div>
+    </div>
+
+    <div id="internal">
+        <div id="main_page">
+            <div id="projects_button" class="button" onclick="load_type('projects')">Projects</div>
+            <div id="skills_button" class="button" onclick="load_type('skills')">Skills</div>
+            <div id="education_button" class="button" onclick="load_type('education')">Education</div>
+            <div id="about_button" class="button" onclick="load_type('about')">About</div>
+            <div id="awards_button" class="button" onclick="load_type('awards')">Awards</div>
+            <div id="community_button" class="button" onclick="load_type('community')">Commuity Service</div>
+        </div>
+
+        <div id="projects_page" class="hide_page">
+            <div id="phoenix" class="project_card">
+                <div id="title">
+                    Phoenix
+                </div>
+                <div id="description">
+                    A cross platform C++ windowing and rendering engine that allows people to build cross platform applications without needing to delve into the OS specific feature sets.
+                </div>
+                <img src="textures/phoeix.jpg">
+            </div>
+            <div id="gryphon" class="project_card">
+                <div id="title">
+                    Gryphon
+                </div>
+                <div id="description">
+                    A text editor that allows developers to take full use of the Phoenix Framework within there IDE
+                </div>
+                <img src="textures/gyphon.png"> 
+            </div>
+            <div id="placeholder1" class="project_card"></div>
+            <div id="amazingmath" class="project_card">
+                <div id="title">
+                    Amazing Math
+                </div>
+                <div id="description">
+                    Built in collaboration with Tyler Spruill it is a gaming website built to showcase my abilities as a programmer and to show some of the games that I have built over my years in unity.
+                </div>
+                <img src="textures/amazing-math.png">
+            </div>
+            <div id="thegrengine" class="project_card">
+                <div id="title">
+                    The Grengine
+                </div>
+                <div id="description">
+                    A Game engine that allows developers to use the Phoenix Frameworks rendering capabilities to their fullest extent without touching a single line of C++.
+                </div>
+                <img src="textures/grengine.jpg"> 
+            </div>
+            <div id="placeholder2" class="project_card"></div>
+            <div id="siron" class="project_card">
+                <div id="title">
+                    Syron
+                </div>
+                <div id="description">
+                    A C++ build and project management system that allows developers to build and manage a complicated web of libraries and executables and per platform dependencies.
+                </div>
+                <img src="textures/siron.jpg"> 
+            </div>
+            <div id="backbutton" class="project_card" onclick="load_back('projects')">Back</div>
+        </div>
+
+        <div id="about_page" class="hide_page">
+            <div id="picture" class="about_card">
+            </div>
+            <div id="placeholder1" class="about_card"></div>
+            <div id="placeholder2" class="about_card"></div>
+            <div id="abouttext" class="about_card">I am a C++ developer who focuses on making the language easier to use for new developers by making it cross platform and allowing them to build complicated apps with ease. I have been programming since the age of 10 and my skills have evolved from being stuck in tutorial hell to being able to build full complicated apps since then. My other love in life is swimming and it takes up my life from 4:45am - 6:45am every morning. I would love to be a coach for my summer team but my mom is the president and she does not want to look biased so I have to remain just a swimmer on the team for the next 2 years.</div>
+            <div id="backbutton" class="about_card" onclick="load_back('about')">Back</div>
+        </div>
+
+        <div id="education_page" class="hide_page">
+            <div id="school" class="education_card">
+                <div id="text">
+                    Matoaca High School <br /><br />
+                    Center for information and technology</div>
+                <img src="textures/matoaca.jpg">
+            </div>
+            <div id="class1" class="education_card">
+                <div id="classname">Advanced Placement Computer Science</div>
+                <div id="classdesc">While it is the easiest AP test you can take, it still is an AP class and while I already knew javascript it allowed me to get more comfortable with the language by using it on a regular basis.</div>
+            </div>
+            <div id="class2" class="education_card">
+                <div id="classname">Advanced Placement World History</div>
+                <div id="classdesc">Teaching me how to not rush my work at the last minute and to think about the meaning behind my writing not the length of my writing.</div>
+            </div>
+            <div id="class3" class="education_card">
+                <div id="classname">Honors Chemistry</div>
+                <div id="classdesc">IDK IL KINDA DESCRIBE THIS CLASS LATER BRO I GOT NOTHIN FOR THIS</div>
+            </div>
+            <div id="resume" class="education_card" onclick="load_resume()">
+                <div>Link to resume</div>
+            </div>
+
+            <div id="placeholder1" class="education_card"></div>
+
+            <div id="backbutton" class="education_card" onclick="load_back('education')">Back</div>
+        </div>
+        
+        <div id="skills_page" class="hide_page">
+            <div id="language" class="skills_card"></div>
+            <div id="blender" class="skills_card"></div>
+            <div id="gimp" class="skills_card"></div>
+            <div id="unity" class="skills_card"></div>
+            <div id="placeholder1" class="skills_card"></div>
+            <div id="placeholder2" class="skills_card"></div>
+            <div id="backbutton" class="skills_card" onclick="load_back('skills')">Back</div>            
+        </div>
+
+        <div id="awards_page" class="hide_page">
+            <div id="coachesaward" class="awards_card"></div>
+            <div id="historyaward" class="awards_card"></div>
+            <div id="placeholder1" class="awards_card"></div>
+            <div id="placeholder2" class="awards_card"></div>
+            <div id="backbutton" class="awards_card" onclick="load_back('awards')">Back</div>
+        </div>
+
+        <div id="community_page" class="hide_page">
+            <div id="community1" class="community_card"></div>
+            <div id="community2" class="community_card"></div>
+            <div id="placeholder1" class="community_card"></div>
+            <div id="placeholder2" class="community_card"></div>
+            <div id="backbutton" class="community_card" onclick="load_back('community')">Back</div>
+        </div>
+    </div>
+
 </body>
 </html>

@@ -1,0 +1,82 @@
+#skills_page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    display: grid;
+    grid-template-rows: repeat(100, 1fr);
+    grid-template-columns: repeat(100, 1fr);
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.skills_card {
+    border-style: solid; 
+    border-color: white;
+    border-width: 2px;    
+    border-radius: 10px;
+    box-shadow: 0 0 10px #9ecaed;
+    color: white;
+
+    margin: 5px;
+}
+
+#language.skills_card {
+    grid-column: 1 / 50;
+    grid-row: 1 / 90;
+
+    background-image: url("/textures/programminglogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+#blender.skills_card {
+    grid-column: 50 / 95;
+    grid-row: 1 / 40;
+
+    background-image: url("/textures/blenderlogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+#gimp.skills_card {
+    grid-column: 50 / 75;
+    grid-row: 40 / 85;
+
+    background-image: url("/textures/gimplogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+#unity.skills_card {
+    grid-column: 75 / 101;
+    grid-row: 40 / 85;
+
+    background-image: url("/textures/unitylogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+#placeholder1.skills_card {
+    grid-column: 50 / 101;
+    grid-row: 85 / 101;
+}
+#placeholder2.skills_card {
+    grid-column: 95 / 101;
+    grid-row: 1 / 40;
+}
+
+#backbutton.skills_card {
+    text-align: center;
+    font-size: 3vw;
+    grid-column: 1 / 50;
+    grid-row: 90 / 101;
+    transition: all 0.5s;
+}

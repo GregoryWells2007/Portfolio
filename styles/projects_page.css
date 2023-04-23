@@ -1,0 +1,262 @@
+#projects_page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    display: grid;
+    grid-template-rows: repeat(100, 1fr);
+    grid-template-columns: repeat(100, 1fr);
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.project_card {
+    border-style: solid; 
+    border-color: white;
+    border-width: 2px;    
+    border-radius: 10px;
+    box-shadow: 0 0 10px #9ecaed;
+    color: white;
+
+    overflow: hidden;
+
+    margin: 5px;
+}
+
+#phoenix.project_card {
+    grid-column: 1 / 60;
+    grid-row: 1 / 50;
+    margin-left: 0px;
+}
+
+#gryphon.project_card {
+    grid-column: 60 / 101;
+    grid-row: 1 / 30;
+    margin-right: 0px;
+}
+
+#placeholder1.project_card {
+    grid-column: 60 / 80;
+    grid-row: 30 / 50
+}
+
+#siron.project_card {
+    grid-column: 80 / 101;
+    grid-row: 30 / 95;
+    margin-right: 0px;
+}
+
+#thegrengine.project_card {
+    grid-column: 50 / 80;
+    grid-row: 50 / 95;
+}
+
+#amazingmath.project_card {
+    grid-column: 10 / 50;
+    grid-row: 50 / 101;   
+}
+
+#placeholder2.project_card {
+    grid-column: 1 / 10;
+    grid-row: 50 / 101;
+    margin-left: 0px;
+}
+
+#backbutton.project_card {
+    grid-column: 50 / 101;
+    grid-row: 95 / 101;
+
+    transition: all 0.5s;
+    text-align: center;
+    font-size: 1.5vw;
+    margin-right: 0px;
+}
+
+#backbutton:hover {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/* this is were we do the internal styling and shit */
+
+@keyframes move_background {
+    0% {
+        left: -10%;
+        top: -10%;
+    }
+    50% {
+        left: -50%;
+        top: -50%;
+    }
+    100% {
+        left: -10%;
+        top: -10%;
+    }
+}
+
+#amazingmath img {
+    width: 100%;
+    transform: scale(300%);
+    filter: blur(5px);
+    position: relative;
+
+    animation-name: move_background;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: all 0.5s;
+}
+
+#amazingmath:hover img {
+    filter: blur(0px);
+}
+
+#amazingmath div#title {
+    position: absolute;
+    z-index: 1;
+    font-size: 3vw;
+    transform: translateY(-20%);
+}
+
+#amazingmath div#description {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    font-size: 1vw;
+    top: 3vw;
+}
+
+#phoenix img {
+    max-width: 100%;
+    max-height: 100%;
+    transform: scale(500%);
+    filter: blur(5px);
+    position: relative;
+
+    animation-name: move_background;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: all 0.5s;
+}
+
+#phoenix:hover img {
+    filter: blur(0px);
+}
+
+#phoenix div#title {
+    position: absolute;
+    z-index: 1;
+    font-size: 3vw;
+    transform: translateY(-20%);
+}
+
+#phoenix div#description {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    font-size: 1vw;
+    top: 3vw;
+}
+
+
+#gryphon img {
+    max-width: 100%;
+    max-height: 100%;
+    transform: scale(500%);
+    filter: blur(5px);
+    position: relative;
+
+    animation-name: move_background;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: all 0.5s;
+}
+
+#gryphon:hover img {
+    filter: blur(0px);
+}
+
+#gryphon div#title {
+    position: absolute;
+    z-index: 1;
+    font-size: 3vw;
+    transform: translateY(-20%);
+}
+
+#gryphon div#description {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    font-size: 1vw;
+    top: 3vw;
+}
+
+#siron img {
+    max-width: 100%;
+    max-height: 100%;
+    transform: scale(350%);
+    filter: blur(5px);
+    position: relative;
+
+    animation-name: move_background;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: all 0.5s;
+}
+
+#siron:hover img {
+    filter: blur(0px);
+}
+
+#siron div#title {
+    position: absolute;
+    z-index: 1;
+    font-size: 3vw;
+    transform: translateY(-20%);
+}
+
+#siron div#description {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    font-size: 1vw;
+    top: 3vw;
+}
+
+#thegrengine img {
+    max-width: 100%;
+    max-height: 100%;
+    transform: scale(350%);
+    filter: blur(5px);
+    position: relative;
+
+    animation-name: move_background;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: all 0.5s;
+}
+
+#thegrengine:hover img {
+    filter: blur(0px);
+}
+
+#thegrengine div#title {
+    position: absolute;
+    z-index: 1;
+    font-size: 3vw;
+    transform: translateY(-20%);
+}
+
+#thegrengine div#description {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    font-size: 1vw;
+    top: 3vw;
+}

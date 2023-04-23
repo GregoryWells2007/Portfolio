@@ -1,0 +1,51 @@
+#awards_page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    display: grid;
+    grid-template-rows: repeat(100, 1fr);
+    grid-template-columns: repeat(100, 1fr);
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.awards_card {
+    border-style: solid; 
+    border-color: white;
+    border-width: 2px;    
+    border-radius: 10px;
+    box-shadow: 0 0 10px #9ecaed;
+    color: white;
+
+    margin: 5px;
+}
+
+#coachesaward.awards_card {
+    grid-column: 1 / 50;
+    grid-row: 1 / 60;
+}
+
+#historyaward.awards_card {
+    grid-column: 50 / 101;
+    grid-row: 40 / 101;
+}
+
+#placeholder1.awards_card {
+    grid-column: 50 / 101;
+    grid-row: 1 / 40;
+}
+
+#placeholder2.awards_card {
+    grid-column: 1 / 50;
+    grid-row: 60 / 90;
+}
+
+#backbutton.awards_card {
+    grid-column: 1 / 50;
+    grid-row: 90 / 101;
+    transition: all 0.5s;
+    font-size: 3vw;
+    text-align: center;
+}

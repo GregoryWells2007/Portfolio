@@ -1,0 +1,115 @@
+#education_page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    display: grid;
+    grid-template-rows: repeat(100, 1fr);
+    grid-template-columns: repeat(100, 1fr);
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.education_card {
+    border-style: solid; 
+    border-color: white;
+    border-width: 2px;    
+    border-radius: 10px;
+    box-shadow: 0 0 10px #9ecaed;
+    color: white;
+
+    margin: 5px;
+}
+
+#school.education_card {
+    grid-column: 1 / 30;
+    grid-row: 1 / 90
+}
+
+#class1.education_card {
+    grid-column: 30 / 101;
+    grid-row: 1 / 30;
+}
+#class2.education_card {
+    grid-column: 30 / 101;
+    grid-row: 30 / 60;
+}
+#class3.education_card {
+    grid-column: 30 / 101;
+    grid-row: 60 / 90;
+}
+#backbutton.education_card {
+    grid-column: 15 / 60;
+    grid-row: 90 / 101;
+    transition: all 0.5s;
+    font-size: 3vw;
+    text-align: center;
+}
+#placeholder1.education_card {
+    grid-column: 1 / 15;
+    grid-row: 90 / 101;
+}
+
+#resume.education_card {
+    grid-column: 60 / 101;
+    grid-row: 90 / 101;
+}
+
+#resume {
+    text-align: center;
+    font-size: 3vw;
+}
+
+#resume div {
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s;
+}
+
+#resume:hover div {
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+    cursor: pointer;
+}
+
+#school {
+    overflow: hidden;
+    color: black;
+}
+
+#school img {
+    position: relative;
+    filter: blur(15px);
+    height: 125%;
+    transform: translateX(-50%);
+    top: -18vw;
+}
+
+#school #text {
+    position: relative;
+    z-index: 2;
+    font-size: 2vw;
+    padding-left: 5px;
+}
+
+.education_card#class1 {
+    background-color: black;
+    padding-left: 10px;
+}
+.education_card#class2 {
+    background-color: black;
+    padding-left: 10px;
+}
+.education_card#class3 {
+    background-color: black;
+    padding-left: 10px;
+}
+
+.education_card #classname {
+    font-size: 2.5vw;
+}
+
+.education_card #classdesc {
+    font-size: 1.5vw;
+}

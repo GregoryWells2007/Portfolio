@@ -1,0 +1,62 @@
+#about_page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    display: grid;
+    grid-template-rows: repeat(100, 1fr);
+    grid-template-columns: repeat(100, 1fr);
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.about_card {
+    border-style: solid; 
+    border-color: white;
+    border-width: 2px;    
+    border-radius: 10px;
+    box-shadow: 0 0 10px #9ecaed;
+    color: white;
+
+    margin: 5px;
+}
+
+#picture.about_card {
+    grid-column: 1 / 30;
+    grid-row: 1 / 60;
+}
+
+#placeholder1.about_card {
+    grid-column: 1 / 30;
+    grid-row: 60 / 90;
+}
+
+#backbutton.about_card {
+    grid-column: 1 / 30;
+    grid-row: 90 / 101;
+    transition: all 0.5s;
+    text-align: center;
+    font-size: 2.8vw;
+}
+
+#abouttext.about_card {
+    grid-column: 30 / 101;
+    grid-row: 30 / 101;
+}
+
+#placeholder2.about_card {
+    grid-column: 30 / 101;
+    grid-row: 1 / 30;
+}
+
+#picture {
+    background-image: url("/textures/me.jpg");
+    background-size:cover;
+}
+
+#abouttext {
+    font-size: 2vw;
+    text-align: center;
+    background-color: black;
+}
