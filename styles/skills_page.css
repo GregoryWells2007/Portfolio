@@ -26,7 +26,7 @@
     grid-column: 1 / 50;
     grid-row: 1 / 90;
 
-    background-image: url("/textures/programminglogo.png");
+    background-image: url("https://gregorywells2007.github.io/Portfolio//textures/programminglogo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -37,7 +37,7 @@
     grid-column: 50 / 95;
     grid-row: 1 / 40;
 
-    background-image: url("/textures/blenderlogo.png");
+    background-image: url("https://gregorywells2007.github.io/Portfolio//textures/blenderlogo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -48,7 +48,7 @@
     grid-column: 50 / 75;
     grid-row: 40 / 85;
 
-    background-image: url("/textures/gimplogo.png");
+    background-image: url("https://gregorywells2007.github.io/Portfolio//textures/gimplogo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -58,7 +58,7 @@
     grid-column: 75 / 101;
     grid-row: 40 / 85;
 
-    background-image: url("/textures/unitylogo.png");
+    background-image: url("https://gregorywells2007.github.io/Portfolio//textures/unitylogo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
