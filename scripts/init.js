@@ -1,7 +1,6 @@
 async function init_app() {
     var name = document.getElementById('name').innerHTML;
     document.getElementById('name').innerHTML = "";
-    load_type("awards");
     await animate_intro(name);
 }
 
