@@ -25,7 +25,7 @@
 #coachesaward.awards_card {
     grid-column: 1 / 50;
     grid-row: 1 / 60;
-    background-image: url("/textures/coaches_award.png");
+    background-image: url("https://gregorywells2007.github.io/Portfolio/textures/coaches_award.png");
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -33,7 +33,7 @@
 #historyaward.awards_card {
     grid-column: 50 / 101;
     grid-row: 40 / 101;
-    background-image: url("/textures/mostoutstanding.png");
+    background-image: url("https://gregorywells2007.github.io/Portfolio/textures/mostoutstanding.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
