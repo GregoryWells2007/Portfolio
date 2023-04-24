@@ -1,6 +1,7 @@
 async function init_app() {
     var name = document.getElementById('name').innerHTML;
     document.getElementById('name').innerHTML = "";
+    load_type("community");
     await animate_intro(name);
 }
 

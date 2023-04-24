@@ -27,9 +27,13 @@
     grid-row: 1 / 60;
 }
 
-#placeholder1.about_card {
+#swimmingpicture.about_card {
     grid-column: 1 / 30;
     grid-row: 60 / 90;
+    background-image: url("/textures/usaswimminglogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #backbutton.about_card {
@@ -51,7 +55,7 @@
 }
 
 #picture {
-    background-image: url("https://gregorywells2007.github.io/Portfolio//textures/me.jpg");
+    background-image: url("/textures/me.jpg");
     background-size:cover;
 }
 

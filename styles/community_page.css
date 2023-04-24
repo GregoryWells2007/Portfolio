@@ -35,11 +35,17 @@
 #community1.community_card {
     grid-column: 31 / 71; 
     grid-row: 1 / 45;
+    font-size: 1.7vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 #community2.community_card {
     grid-column: 31 / 71;
     grid-row: 45 / 90;
+    font-size: 1.7vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 #backbutton.community_card {
