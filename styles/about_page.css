@@ -30,7 +30,7 @@
 #swimmingpicture.about_card {
     grid-column: 1 / 30;
     grid-row: 60 / 90;
-    background-image: url("/textures/usaswimminglogo.png");
+    background-image: url("https://gregorywells2007.github.io/Portfolio/textures/usaswimminglogo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -55,7 +55,7 @@
 }
 
 #picture {
-    background-image: url("/textures/me.jpg");
+    background-image: url("https://gregorywells2007.github.io/Portfolio/textures/me.jpg");
     background-size:cover;
 }
 
