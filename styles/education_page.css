@@ -65,14 +65,18 @@
 }
 
 #resume div {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    
     text-decoration: none;
-    color: black;
+    color: white;
     transition: all 0.5s;
 }
 
 #resume:hover div {
     text-decoration: none;
-    color: white;
+    color: rgb(0.9, 0.9, 0.9);
     font-size: var(--back-button-size);
     cursor: pointer;
 }
