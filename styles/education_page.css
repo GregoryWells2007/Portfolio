@@ -72,7 +72,8 @@
 
 #resume:hover div {
     text-decoration: none;
-    color: rgb(44, 44, 44);
+    color: white;
+    font-size: var(--back-button-size);
     cursor: pointer;
 }
 
