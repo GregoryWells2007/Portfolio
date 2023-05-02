@@ -1,7 +1,22 @@
+function update_values() {
+    document.body.style.setProperty("--back-button-sze", document.getElementById("projects_page").lastElementChild.offsetHeight + "px");
+    requestAnimationFrame(update_values);
+
+    var skills = document.getElementById("skills_page").getElementsByClassName("skills_card");
+    for (var k = 0; k < skills.length; k++) {
+        skills[k].style.setProperty("--parent-width", (skills[k].offsetHeight * .75) + "px");
+        skills[k].style.setProperty("--parent-height", (skills[k].offsetHeight * .75) + "px");
+    }
+    update_fit();
+}
+
 async function init_app() {
     var name = document.getElementById('name').innerHTML;
     document.getElementById('name').innerHTML = "";
     await animate_intro(name);
+    requestAnimationFrame(update_values);
+
+    text_fitter("fit-text");
 }
 
 async function animate_intro(name) {

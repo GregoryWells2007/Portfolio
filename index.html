@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="styles/skills_page.css">
     <link rel="stylesheet" href="styles/awards_page.css">
     <link rel="stylesheet" href="styles/community_page.css">
-
     <script src="scripts/init.js"></script>
 
     <script src="scripts/ext/gl-matrix.js"></script>
 
+    <script src="scripts/utils/fittext.js"></script>
     <script src="scripts/utils/math.js"></script>
     <script src="scripts/utils/loader.js"></script>
     <script src="scripts/utils/writein.js"></script>
@@ -37,7 +37,7 @@
             <div id="education_button" class="button" onclick="load_type('education')">Education</div>
             <div id="about_button" class="button" onclick="load_type('about')">About</div>
             <div id="awards_button" class="button" onclick="load_type('awards')">Awards</div>
-            <div id="community_button" class="button" onclick="load_type('community')">Commuity Service</div>
+            <div id="community_button" class="button" onclick="load_type('community')">Community Service</div>
         </div>
 
         <div id="projects_page" class="hide_page">
@@ -95,7 +95,10 @@
             <div id="picture" class="about_card"></div>
             <div id="swimmingpicture" class="about_card"></div>
             <div id="placeholder2" class="about_card"></div>
-            <div id="abouttext" class="about_card">I am a C++ developer who focuses on making the language easier to use for new developers by making it cross platform and allowing them to build complicated apps with ease. I have been programming since the age of 10 and my skills have evolved from being stuck in tutorial hell to being able to build full complicated apps since then. My other love in life is swimming and it takes up my life from 4:45am - 6:45am every morning. I would love to be a coach for my summer team but my mom is the president and she does not want to look biased so I have to remain just a swimmer on the team for the next 2 years.</div>
+            <div id="abouttext" class="about_card">
+                <div class="fit-text">
+                    I am a C++ developer who focuses on making the language easier to use for new developers by making it cross platform and allowing them to build complicated apps with ease. I have been programming since the age of 10 and my skills have evolved from being stuck in tutorial hell to being able to build full complicated apps since then. My other love in life is swimming and it takes up my life from 4:45am - 6:45am every morning. I would love to be a coach for my summer team but my mom is the president and she does not want to look biased so I have to remain just a swimmer on the team for the next 2 years.</div>
+                </div>
             <div id="backbutton" class="about_card" onclick="load_back('about')">Back</div>
         </div>
 
@@ -108,15 +111,21 @@
             </div>
             <div id="class1" class="education_card">
                 <div id="classname">Advanced Placement Computer Science</div>
-                <div id="classdesc">While it is the easiest AP test you can take, it still is an AP class and while I already knew javascript it allowed me to get more comfortable with the language by using it on a regular basis.</div>
+                <div id="classdesc" class="fit-text">
+                    <div class="fit-text">While it is the easiest AP test you can take, it still is an AP class and while I already knew javascript it allowed me to get more comfortable with the language by using it on a regular basis.</div>
+                </div>
             </div>
             <div id="class2" class="education_card">
                 <div id="classname">Advanced Placement World History</div>
-                <div id="classdesc">Teaching me how to not rush my work at the last minute and to think about the meaning behind my writing not the length of my writing.</div>
+                <div id="classdesc" class="fit-text">
+                    <div class="fit-text">Teaching me how to not rush my work at the last minute and to think about the meaning behind my writing not the length of my writing.</div>
+                </div>
             </div>
             <div id="class3" class="education_card">
                 <div id="classname">Honors Chemistry</div>
-                <div id="classdesc">This class has just been a fun getaway for me to learn about how the world around me works. While the class is not hard the subject matter is extremely interesting and the class does teach me great problem solving skills</div>
+                <div id="classdesc">
+                    <div class="fit-text">This class has just been a fun getaway for me to learn about how the world around me works. While the class is not hard the subject matter is extremely interesting and the class does teach me great problem solving skills</div>
+                </div>
             </div>
             <div id="resume" class="education_card" onclick="load_resume()">
                 <div>Link to resume</div>
@@ -128,10 +137,50 @@
         </div>
         
         <div id="skills_page" class="hide_page">
-            <div id="language" class="skills_card"></div>
-            <div id="blender" class="skills_card"></div>
-            <div id="gimp" class="skills_card"></div>
-            <div id="unity" class="skills_card"></div>
+            <div id="language" class="skills_card">
+                <div id="image"></div>
+                <div id="text">
+                    <div id="top">
+                        My Language Knowledge
+                    </div> 
+                    <div id="bottom">
+                        These are the programming languages that I know. I am most comfortable in C++
+                    </div>
+                </div>
+            </div>
+            <div id="blender" class="skills_card">
+                <div id="image"></div>
+                <div id="text">
+                    <div id="top">
+                        Blender
+                    </div> 
+                    <div id="bottom">
+                        Blender for 3d Modeling
+                    </div>
+                </div>
+            </div>
+            <div id="gimp" class="skills_card">
+                <div id="image"></div>
+                <div id="text">
+                    <div id="top">
+                        GIMP
+                    </div> 
+                    <div id="bottom">
+                        GIMP for image editing
+                    </div>
+                </div>
+            </div>
+            <div id="unity" class="skills_card">
+                <div id="image"></div>
+                <div id="text">
+                    <div id="top">
+                        Unity
+                    </div> 
+                    <div id="bottom">
+                        Unity for building Games
+                    </div>
+                </div>
+            </div>
             <div id="placeholder1" class="skills_card"></div>
             <div id="placeholder2" class="skills_card"></div>
             <div id="backbutton" class="skills_card" onclick="load_back('skills')">Back</div>            
@@ -141,20 +190,28 @@
             <div id="coachesaward" class="awards_card"></div>
             <div id="historyaward" class="awards_card"></div>
             <div id="placeholder1" class="awards_card">
-                Last year in World History 1 I had the highest grade in the entrired 9th grade class and my dad was extremely proud of me because he is a history teacher himself so I was carying on the family name
+                <div class="fit-text">
+                    Last year in World History 1 I had the highest grade in the entrired 9th grade class and my dad was extremely proud of me because he is a history teacher himself so I was carying on the family name
+                </div>
             </div>
             <div id="placeholder2" class="awards_card">
-                I won a coaches award in the 2020 - 2021 season and it sits proudly on my desk as a reminder of covid and that horrible year
+                <div class="fit-text">
+                    I won a coaches award in the 2020 - 2021 season and it sits proudly on my desk as a reminder of covid and that horrible year
+                </div>
             </div>
             <div id="backbutton" class="awards_card" onclick="load_back('awards')">Back</div>
         </div>
  
         <div id="community_page" class="hide_page">
             <div id="community1" class="community_card">
-                Last year I had the wonderfull oppertunity to time for a Special Education Swim Meet. It was a wonderfull learning experience and it really put my life into perspective. I take my body for granted and seeing people that had little to no control over their limbs do that really gave me a new outlook on life
+                <div class="fit-text">
+                    Last year I had the wonderfull oppertunity to time for a Special Education Swim Meet. It was a wonderfull learning experience and it really put my life into perspective. I take my body for granted and seeing people that had little to no control over their limbs do that really gave me a new outlook on life
+                </div>
             </div>
             <div id="community2" class="community_card">
-                I took a saturday going to Bell Isle to help cleanup some of the trash there. This was a fun experience because I love to be outside and while I was sunburned for a week afterwards I am still happy that I did this because you do not realize how much trash is in out enviroment untill you go and clean it up yourself
+                <div class="fit-text">
+                    I took a saturday going to Bell Isle to help cleanup some of the trash there. This was a fun experience because I love to be outside and while I was sunburned for a week afterwards I am still happy that I did this because you do not realize how much trash is in out enviroment untill you go and clean it up yourself
+                </div>
             </div>
             <div id="placeholder1" class="community_card"></div>
             <div id="placeholder2" class="community_card"></div>

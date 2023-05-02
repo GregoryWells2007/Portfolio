@@ -27,13 +27,11 @@
 #phoenix.project_card {
     grid-column: 1 / 60;
     grid-row: 1 / 50;
-    margin-left: 0px;
 }
 
 #gryphon.project_card {
     grid-column: 60 / 101;
     grid-row: 1 / 30;
-    margin-right: 0px;
 }
 
 #placeholder1.project_card {
@@ -43,13 +41,12 @@
 
 #siron.project_card {
     grid-column: 80 / 101;
-    grid-row: 30 / 95;
-    margin-right: 0px;
+    grid-row: 30 / 90;
 }
 
 #thegrengine.project_card {
     grid-column: 50 / 80;
-    grid-row: 50 / 95;
+    grid-row: 50 / 90;
 }
 
 #amazingmath.project_card {
@@ -60,17 +57,18 @@
 #placeholder2.project_card {
     grid-column: 1 / 10;
     grid-row: 50 / 101;
-    margin-left: 0px;
 }
 
 #backbutton.project_card {
     grid-column: 50 / 101;
-    grid-row: 95 / 101;
+    grid-row: 90 / 101;
 
     transition: all 0.5s;
-    text-align: center;
-    font-size: 1.5vw;
-    margin-right: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--back-button-sze);
 }
 
 #backbutton:hover {

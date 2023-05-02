@@ -35,6 +35,16 @@ body {
     src: url(../fonts/Kanit-Black.ttf);
 }
 
+.fit-text {
+    --font-size: 10px;
+
+    font-size: var(--font-size) !important;
+    width: fit-content;
+    height: fit-content;
+
+    position: relative;
+}
+
 #bottom_text {
     color: white;
     font-size: 1vw;
@@ -100,7 +110,11 @@ body {
 
 .button {
     font-size: 4vw;
-    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 
     border-style: solid; 
     border-color: white;

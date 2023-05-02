@@ -30,7 +30,7 @@
 #swimmingpicture.about_card {
     grid-column: 1 / 30;
     grid-row: 60 / 90;
-    background-image: url("https://gregorywells2007.github.io/Portfolio/textures/usaswimminglogo.png");
+    background-image: url("../textures/usaswimminglogo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -40,8 +40,11 @@
     grid-column: 1 / 30;
     grid-row: 90 / 101;
     transition: all 0.5s;
-    text-align: center;
-    font-size: 2.8vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--back-button-sze);
 }
 
 #abouttext.about_card {
@@ -55,12 +58,15 @@
 }
 
 #picture {
-    background-image: url("https://gregorywells2007.github.io/Portfolio/textures/me.jpg");
+    background-image: url("../textures/me.jpg");
     background-size:cover;
 }
 
 #abouttext {
-    font-size: 2vw;
-    text-align: center;
     background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }

@@ -18,52 +18,126 @@
     border-radius: 10px;
     box-shadow: 0 0 10px #9ecaed;
     color: white;
+    overflow: hidden;
 
     margin: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
+.skills_card #image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: var(--parent-width);
+    height: var(--parent-height);
+    transition: all 0.5s;
+
+    position: absolute;
+}
+.skills_card:hover #image {
+    filter: blur(10px);
+}
+
+.skills_card #text #top {
+    font-size: 0vw;
+    position: relative;
+    filter: blur(10px);
+    text-align: center;
+    top: 50px;
+    opacity: 0;
+    transition: all 0.5s;
+
+    animation: move2 0.1s forwards; 
+}
+
+.skills_card:hover #text #top {
+    font-size: 3vw;
+
+    filter: none;
+    animation: move 1s forwards; 
+    animation-delay: 0.5s;
+    
+    opacity: 1;
+}
+
+@keyframes move2 {
+    from {
+        top: 0px;
+        opacity: 1;
+    }
+    to {
+        top: 50px;
+        opacity: 0;
+    }
+}
+
+@keyframes move {
+    to {
+        top: 0px;
+    }
+}
+
+.skills_card #text #bottom {
+    font-size: 2vw;
+    color: rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+.skills_card:hover #text #bottom {
+    transition: all 0.5s;
+    font-size: 2vw;
+    position: relative;
+    filter: none;
+    transition-delay: 1s;
+    color: white;
+}
+
 
 #language.skills_card {
     grid-column: 1 / 50;
     grid-row: 1 / 90;
-
-    background-image: url("https://gregorywells2007.github.io/Portfolio/textures/programminglogo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     background-color: rgb(0, 0, 0, 0.5);
+}
+
+#language #image {
+    background-image: url("../textures/programminglogo.png");
 }
 
 #blender.skills_card {
     grid-column: 50 / 95;
     grid-row: 1 / 40;
 
-    background-image: url("https://gregorywells2007.github.io/Portfolio/textures/blenderlogo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     background-color: rgb(0, 0, 0, 0.5);
+}
+
+#blender #image {
+    background-image: url("../textures/blenderlogo.png");
 }
 
 #gimp.skills_card {
     grid-column: 50 / 75;
     grid-row: 40 / 85;
 
-    background-image: url("https://gregorywells2007.github.io/Portfolio/textures/gimplogo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     background-color: rgb(0, 0, 0, 0.5);
 }
+#gimp #image {
+    background-image: url("../textures/gimplogo.png");
+}
+
 #unity.skills_card {
     grid-column: 75 / 101;
     grid-row: 40 / 85;
 
-    background-image: url("https://gregorywells2007.github.io/Portfolio/textures/unitylogo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     background-color: rgb(0, 0, 0, 0.5);
 }
+#unity #image {
+    background-image: url("../textures/unitylogo.png");
+}
+
 #placeholder1.skills_card {
     grid-column: 50 / 101;
     grid-row: 85 / 101;
@@ -74,9 +148,12 @@
 }
 
 #backbutton.skills_card {
-    text-align: center;
-    font-size: 3vw;
     grid-column: 1 / 50;
     grid-row: 90 / 101;
     transition: all 0.5s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--back-button-sze);
 }
